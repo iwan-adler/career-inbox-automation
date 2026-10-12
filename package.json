@@ -1,0 +1,14 @@
+{
+  "name": "career-inbox-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "n8n + Gmail workflow that classifies career emails and prepares reply drafts for human review",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build-workflow.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

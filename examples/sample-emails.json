@@ -1,0 +1,56 @@
+[
+  {
+    "id": "msg-internship-1",
+    "threadId": "thr-1",
+    "subject": "Summer Internship 2027 – Backend Engineering Intern",
+    "from": { "value": [{ "address": "priya.sharma@example-tech.com", "name": "Priya Sharma" }], "text": "Priya Sharma <priya.sharma@example-tech.com>" },
+    "date": "2026-10-12T09:30:00.000Z",
+    "text": "Hi,\n\nWe are hiring backend interns for a 10-week summer internship with a monthly stipend. You will work with Python and FastAPI on our payments platform.\n\nThe last date to apply is 20 October 2026. Please reply with your resume.\n\nThanks,\nPriya",
+    "_expected": { "category": "internship", "deadline": "2026-10-20", "status": "draft_pending" }
+  },
+  {
+    "id": "msg-event-1",
+    "threadId": "thr-2",
+    "subject": "Invitation: Hands-on Workshop on Building AI Agents",
+    "from": "AI Club Team <aiclub@example-college.org>",
+    "date": "2026-10-11T14:00:00.000Z",
+    "html": "<p>Dear students,</p><p>Join our <b>hands-on workshop</b> on building AI agents with Python this Saturday.</p><p>Seats are limited. Register by 15th Oct.</p>",
+    "_expected": { "category": "event", "deadline": "2026-10-15", "status": "draft_pending" }
+  },
+  {
+    "id": "msg-university-1",
+    "threadId": "thr-3",
+    "subject": "Mid-term examination timetable – Semester I",
+    "from": { "value": [{ "address": "exams@srmap.edu.in", "name": "Office of the Controller of Examinations" }], "text": "Office of the Controller of Examinations <exams@srmap.edu.in>" },
+    "date": "2026-10-10T08:00:00.000Z",
+    "text": "Dear Students,\nThe mid-term examination timetable for Semester I is attached. Exams begin on 27/10/2026.\nRegards,\nExamination Cell",
+    "_expected": { "category": "university", "deadline": null, "status": "no_reply_needed" }
+  },
+  {
+    "id": "msg-deadline-1",
+    "threadId": "thr-4",
+    "subject": "Final reminder: scholarship form",
+    "from": "Scholarship Desk <scholarships@example-foundation.org>",
+    "date": "2026-10-12T06:00:00.000Z",
+    "text": "This is a final reminder that the deadline for submitting your scholarship form is 14/10/2026. Late submissions will not be accepted.",
+    "_expected": { "category": "deadline", "deadline": "2026-10-14", "status": "draft_pending" }
+  },
+  {
+    "id": "msg-noreply-1",
+    "threadId": "thr-5",
+    "subject": "Your application for Software Engineering Intern was received",
+    "from": "Careers <no-reply@careers.example.com>",
+    "date": "2026-10-12T07:00:00.000Z",
+    "text": "Thank you for applying to the Software Engineering Intern role. Our recruitment team will review your resume and contact you if you are shortlisted for an interview.",
+    "_expected": { "category": "internship", "deadline": null, "status": "no_reply_address" }
+  },
+  {
+    "id": "msg-other-1",
+    "threadId": "thr-6",
+    "subject": "Your food order is on the way",
+    "from": "Food App <orders@example-food.com>",
+    "date": "2026-10-12T12:00:00.000Z",
+    "text": "Your order of 2 items will arrive in 25 minutes. Track it in the app.",
+    "_expected": { "category": "other", "deadline": null, "status": "irrelevant" }
+  }
+]
