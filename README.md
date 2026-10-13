@@ -52,7 +52,9 @@ tests/                         node:test suites (no dependencies)
 
 ## Import into n8n
 
-Works with n8n Cloud or self-hosted n8n.
+Designed for n8n Cloud or self-hosted n8n.
+
+**Tested on n8n Cloud (13 Oct 2026):** the workflow JSON was imported as-is, connected to an existing Gmail credential, and run against a test internship email. It ended with `status: "drafted"` in **Record status**, and the reply draft appeared in Gmail. Self-hosted n8n has not been tested.
 
 1. In n8n: **Workflows → Add workflow → ⋯ menu → Import from File…** and choose `workflow/career-inbox-workflow.json`. Alternatively, paste the file's contents into the canvas.
 2. **Set up the credential.** The export intentionally contains **no credentials**. Open **Gmail Trigger** and choose your existing *Gmail OAuth2* credential, then do the same in **Create Gmail draft**.
@@ -98,7 +100,7 @@ What the tests cover:
 
 ## Limitations
 
-- **Testing against real n8n and Gmail is still to do.** The workflow JSON was written for current n8n node versions (Gmail Trigger v1.2, Gmail v2.1, Code v2, If v2) and its logic is tested in a fake environment, but the steps under *Import into n8n* still need to be run once for real. If n8n renames a field on import, check the draft node's *Thread ID* and *To Email* options.
+- **Live testing so far is one manual run on n8n Cloud** with a single test email (see *Import into n8n*). The active, every-5-minutes mode and its duplicate tracking across runs are covered by the unit tests, but haven't been observed live over time. Node versions used: Gmail Trigger v1.2, Gmail v2.1, Code v2, If v2. If a future n8n version renames fields on import, check the draft node's *Thread ID* and *To Email* options.
 - Keyword rules are English-only and will misclassify some emails. The `scores` and `matchedKeywords` fields in each result show why an email got its category, which makes tuning easier.
 - Numeric dates are read day-first (`05/11/2026` = 5 November), the Indian convention.
 - The status log is kept in n8n static data, which you see through execution history rather than a spreadsheet.
