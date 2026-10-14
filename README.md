@@ -1,5 +1,7 @@
 # Career Inbox Automation (n8n + Gmail)
 
+[![tests](https://github.com/iwan-adler/career-inbox-automation/actions/workflows/tests.yml/badge.svg)](https://github.com/iwan-adler/career-inbox-automation/actions/workflows/tests.yml)
+
 An n8n workflow that watches a Gmail inbox for career emails and sorts each one into **internship**, **event**, **university**, **deadline** or **other**. It pulls out the sender, subject, a short summary and any deadline. For emails that need an answer, it **prepares a reply draft for you to review**. It never sends anything itself.
 
 ## Why
