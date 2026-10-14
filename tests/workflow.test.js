@@ -37,6 +37,12 @@ describe("workflow structure", () => {
     assert.equal(workflow.connections["Create Gmail draft"].main.length, 2);
   });
 
+  test("generated code uses LF line endings on every OS", () => {
+    for (const n of workflow.nodes.filter((n) => n.type === "n8n-nodes-base.code")) {
+      assert.ok(!n.parameters.jsCode.includes(String.fromCharCode(13)), `${n.name} contains CR characters`);
+    }
+  });
+
   test("committed workflow file is up to date (run: node scripts/build-workflow.js)", () => {
     const committed = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
     assert.deepEqual(committed, JSON.parse(JSON.stringify(workflow)));

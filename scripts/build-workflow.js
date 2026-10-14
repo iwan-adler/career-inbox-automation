@@ -16,7 +16,9 @@ const MARKER = "// ---- n8n:exclude-below ----";
 const GMAIL_QUERY = "in:inbox -category:promotions -category:social -from:me";
 
 function libraryCode() {
-  const source = fs.readFileSync(LIB_PATH, "utf8");
+  // Normalise line endings: a Windows checkout (core.autocrlf) has CRLF, Linux has LF,
+  // and the generated workflow must be identical whichever OS builds it.
+  const source = fs.readFileSync(LIB_PATH, "utf8").replace(/\r\n/g, "\n");
   const cut = source.indexOf(MARKER);
   if (cut === -1) throw new Error(`Marker "${MARKER}" not found in ${LIB_PATH}`);
   return source.slice(0, cut).trimEnd();
